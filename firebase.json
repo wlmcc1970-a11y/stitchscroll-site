@@ -1,0 +1,22 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.git/**",
+      "**/.github/**",
+      "**/node_modules/**",
+      "**/*.bak-*"
+    ],
+    "appAssociation": "NONE",
+    "cleanUrls": false,
+    "trailingSlash": false,
+    "headers": [
+      { "source": "/sw.js", "headers": [ { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" } ] },
+      { "source": "/index.html", "headers": [ { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" } ] },
+      { "source": "/", "headers": [ { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" } ] },
+      { "source": "/manifest.json", "headers": [ { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" } ] },
+      { "source": "/.well-known/assetlinks.json", "headers": [ { "key": "Content-Type", "value": "application/json; charset=utf-8" }, { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" } ] }
+    ]
+  }
+}
