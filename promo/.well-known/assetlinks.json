@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.digirunestudios.stitchscroll",
+      "sha256_cert_fingerprints": [
+        "F6:F9:36:61:41:7D:79:28:BA:74:AA:70:80:92:D6:4B:BB:FA:7D:80:49:36:C4:52:F4:3C:61:C1:09:02:67:38",
+        "AC:56:70:09:55:3D:B5:F9:02:28:40:21:88:DB:A5:FA:17:0D:FE:07:2A:8D:00:09:F6:3F:25:D0:4C:BE:8F:C6"
+      ]
+    }
+  }
+]

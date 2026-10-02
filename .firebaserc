@@ -1,0 +1,11 @@
+{
+  "projects": { "default": "stitchscroll-app" },
+  "targets": {
+    "stitchscroll-app": {
+      "hosting": {
+        "promo": ["stitchscroll-app"],
+        "app": ["digirune-ss-app"]
+      }
+    }
+  }
+}

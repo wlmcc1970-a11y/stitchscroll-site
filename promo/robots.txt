@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stitchscroll.digirunestudios.com/sitemap.xml

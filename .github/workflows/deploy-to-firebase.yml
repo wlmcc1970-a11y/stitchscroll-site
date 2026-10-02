@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   publish:
-    name: Deploy to stitchscroll.digirunestudios.com
+    name: Deploy Stitch Scroll (app site, and the website once switched)
     runs-on: ubuntu-latest
     steps:
       - name: Get the files
@@ -32,5 +32,11 @@ jobs:
       - name: Install the Firebase CLI
         run: npm install -g firebase-tools
 
+      - name: Make sure the hidden app site exists (one time; harmless after)
+        run: firebase hosting:sites:create digirune-ss-app --project stitchscroll-app --non-interactive || echo "app site already exists"
+
       - name: Publish
-        run: firebase deploy --only hosting --project stitchscroll-app --non-interactive
+        # PHASE A (2026-10-02): only the hidden app site is published. The branded address keeps serving
+        # the v0.3.3 app until the new store builds pass on real phones (Will's OK), then PHASE B changes
+        # this line to:  firebase deploy --only hosting --project stitchscroll-app --non-interactive
+        run: firebase deploy --only hosting:app --project stitchscroll-app --non-interactive
