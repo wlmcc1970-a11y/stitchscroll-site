@@ -4,7 +4,7 @@
    are never touched: they always go straight to the network. Page photos live in the app's own
    device storage, not in this cache. */
 'use strict';
-const CACHE = 'stitch-scroll-v1.0.0-b7648c7376';
+const CACHE = 'stitch-scroll-v1.0.1-db6b6ea33f';
 const SHELL = ["./","index.html","manifest.json","privacy.html","delete-account.html","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-192.png","icons/icon-maskable-512.png","icons/apple-touch-icon-180.png","printables/pdf/crochet-abbreviations-a4.pdf","printables/pdf/crochet-abbreviations-letter.pdf","printables/pdf/hook-and-needle-sizes-a4.pdf","printables/pdf/hook-and-needle-sizes-letter.pdf","printables/pdf/knitting-abbreviations-a4.pdf","printables/pdf/knitting-abbreviations-letter.pdf","printables/pdf/row-counter-tracker-a4.pdf","printables/pdf/row-counter-tracker-letter.pdf","printables/pdf/us-uk-crochet-terms-a4.pdf","printables/pdf/us-uk-crochet-terms-letter.pdf","printables/pdf/yarn-weight-chart-a4.pdf","printables/pdf/yarn-weight-chart-letter.pdf"];
 const APP_PAGES = ['', 'index.html', 'privacy.html', 'delete-account.html'];
 self.addEventListener('install', (event) => {
