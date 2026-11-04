@@ -31,9 +31,9 @@ footer{border-top:2px solid var(--line);margin-top:28px;padding-top:16px;font-si
 </style>
 </head>
 <body>
-<header><div class="wrap"><p class="brand">Stitch&nbsp;Scroll · DigiRune&nbsp;Studios</p><h1>Privacy Policy</h1><p class="meta">Effective October 1, 2026. Last updated October 23, 2026. Version 1.0.1.</p></div></header>
+<header><div class="wrap"><p class="brand">Stitch&nbsp;Scroll · DigiRune&nbsp;Studios</p><h1>Privacy Policy</h1><p class="meta">Effective October 1, 2026. Last updated November 4, 2026. Version 1.1.1.</p></div></header>
 <main class="wrap">
-<div class="short"><p><strong>The short version.</strong> Stitch&nbsp;Scroll reads the knitting or crochet pattern you photograph and turns it into rows you count with a tap. You sign in with Apple or Google so your patterns, page photos, counts, notes and Scan&nbsp;Credits follow you to a new phone. When you scan, your page photos go once to our AI provider only to read them. We never share or sell your patterns, never show ads, and never track you. You can delete your account and everything in it from inside the app.</p></div>
+<div class="short"><p><strong>The short version.</strong> Stitch&nbsp;Scroll reads the knitting or crochet pattern you photograph and turns it into rows you count with a tap. You sign in with Apple or Google so your patterns, page photos, counts, notes and Scan&nbsp;Credits follow you to a new phone. When you scan, your page photos go to our AI provider only to read them. We never share or sell your patterns, never show ads, and never track you. You can delete your account and everything in it from inside the app.</p></div>
 
 <h2>Who we are</h2>
 <p>Stitch&nbsp;Scroll is made by DigiRune&nbsp;Studios, a division of McCullough&nbsp;Development, Inc. (a South Carolina corporation in Beaufort, South Carolina, USA). Questions about this policy? Email <a href="mailto:will@digirunestudios.com">will@digirunestudios.com</a>. This page supplements the general <a href="https://digirunestudios.com/#privacy">DigiRune&nbsp;Studios privacy policy</a>; where they differ for Stitch&nbsp;Scroll, this page governs.</p>
@@ -45,7 +45,7 @@ footer{border-top:2px solid var(--line);margin-top:28px;padding-top:16px;font-si
 <p>The patterns Stitch&nbsp;Scroll reads for you, the photos of their pages, your place in each pattern, any lines you corrected, and your own notes, row reminders, time spent and <span class="nw">finished-project</span> photo are stored in two places: on your device, so the app works without internet, and in your private account in Google Firebase (Firestore), so they appear on your other devices. We keep the page photos because the app shows the designer's own printed line beside every row. Your patterns are private to your account. We do not browse, share, publish or sell them.</p>
 
 <h2>Reading your pattern</h2>
-<p>When you tap <strong>Read my pattern</strong>, the pages you chose are sent over an encrypted connection, through a server we run on Cloudflare, to <strong>Anthropic</strong> (the maker of the Claude AI models) for one purpose: reading the words and charts on your pages. Pages you mark as a cover or photo are never sent. Under Anthropic's commercial terms, what we send through their API is not used to train their models by default and is kept only for a limited time. See <a href="https://privacy.claude.com">privacy.claude.com</a>. Our server keeps the reading result for up to one hour so a dropped connection never costs you a second scan, then it is deleted.</p>
+<p>When you tap <strong>Read my pattern</strong>, the pages you chose are sent over an encrypted connection, through a server we run on Cloudflare, to <strong>Anthropic</strong> (the maker of the Claude AI models) for one purpose: reading the words and charts on your pages. A page can be sent more than once if the first read needs a second try. Pages you mark as a cover or photo are never sent. Under Anthropic's commercial terms, what we send through their API is not used to train their models by default and is kept only for a limited time. See <a href="https://privacy.claude.com">privacy.claude.com</a>. Our server keeps the reading result for up to 7 days so a dropped connection never costs you a second scan, then it is deleted (sooner if you delete your account).</p>
 
 <h2>Scan&nbsp;Credits and purchases</h2>
 <p>Your Scan&nbsp;Credit balance (how many credits you have and have used) is kept with your account on our server so it follows you to a new device. Purchases are handled by the Apple App&nbsp;Store or Google&nbsp;Play under their own terms. We receive a receipt to confirm the purchase, never your card details. We keep a record of each purchase (never card details) so it is never credited twice, including after an account is deleted.</p>
@@ -65,23 +65,31 @@ footer{border-top:2px solid var(--line);margin-top:28px;padding-top:16px;font-si
 <ul>
 <li><strong>Google Firebase</strong>: sign-in and storing your patterns and page photos in your account.</li>
 <li><strong>Anthropic</strong>: reading the pages you scan.</li>
-<li><strong>Cloudflare</strong>: our server that sends scans to Anthropic and keeps your scan balance.</li>
+<li><strong>Cloudflare</strong>: our server that sends scans to Anthropic and keeps your scan balance. Cloudflare's cdnjs also delivers two open-source helpers the app uses to open PDFs and iPhone photos; it receives your device's ordinary web request (such as its IP address), never your pages or patterns.</li>
 <li><strong>Apple and Google</strong>: sign-in and purchases.</li>
 </ul>
 <p>We do not sell, rent or trade your information. We may disclose information if the law requires it.</p>
 
 <h2>Deleting your data</h2>
 <ul>
-<li><strong>Remove a pattern</strong>: open it, tap the list of rows, then <strong>Remove this pattern</strong>. Its rows, your place and its page photos are removed from your device and your account.</li>
-<li><strong>Delete your account</strong>: Settings, then <strong>Delete my account</strong>. This removes your account, your cloud copy, your page photos in the cloud and your scan balance. Patterns already on the device stay there until you remove them or delete the app.</li>
+<li><strong>Remove a pattern</strong>: open it, tap the list of rows, then <strong>Remove this pattern</strong>. Its rows and your place are removed from your device and, when you are signed in, from your account at the next sync. If you changed the same pattern on another device before that device synced, its changed copy is kept; remove it there too. Its page photos are removed from your device at once, and from your account after the removal has reached your account at a sync while you are signed in; until then they stay in your private account, unseen. A page photo is kept while something else on this device still uses it: another of your patterns (for example the part of a scan you kept and the full scan of the same pages), patterns kept on this device for another account, or a scan that has not finished.</li>
+<li><strong>Delete your account</strong>: Settings, then <strong>Delete my account</strong>. This removes your account, your cloud copy, your page photos in the cloud and your scan balance. If any page photo cannot be removed, the app tells you and gives you a number to email us, and we remove it for you. Patterns already on the device stay there until you remove them or delete the app.</li>
 <li>No longer have the app? <a href="./delete-account.html">Ask us to delete your account</a>.</li>
+</ul>
+<p>What we keep after you delete your account:</p>
+<ul>
+<li>A record of each purchase (the store's order number, your account ID, the product, the number of Scan&nbsp;Credits and the time, never card details), so a purchase is never credited twice.</li>
+<li>A record that the 3 included Scan&nbsp;Credits were given to your Apple or Google sign-in, with your account ID, so they are given only once per sign-in.</li>
+<li>A note that the account was deleted: on our scan server for 90 days, and in our database with no end date, so a phone that is still signed in cannot bring the account back.</li>
+<li>If you were invited to test Stitch&nbsp;Scroll, the invite record for your email address.</li>
+<li>Short-lived limit counters (some by internet address), which expire within about a day.</li>
 </ul>
 
 <h2>Children</h2>
 <p>Stitch&nbsp;Scroll is not directed at children under 13 and we do not knowingly collect information from them.</p>
 
 <h2>Telling you when it comes to iPhone</h2>
-<p>If you email us to be told when Stitch&nbsp;Scroll comes to iPhone, we keep your email address only to send you that news and, if you asked, an invite to try the iPhone version early. We never add it to a mailing list, share it or sell it, and we delete it once that message is sent. Email <a href="mailto:will@digirunestudios.com">will@digirunestudios.com</a> any time to have it deleted sooner.</p>
+<p>If you email us to be told when Stitch&nbsp;Scroll comes to iPhone, we keep your email address only to send you that news and, if you asked, an invite to try the iPhone version early. We never add it to a mailing list, share it or sell it. Once that message is sent we delete it, unless you were invited to test: then the invite record for your email address is kept so your invite keeps working. Email <a href="mailto:will@digirunestudios.com">will@digirunestudios.com</a> any time to have it deleted sooner.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, we will update this page and the date at the top.</p>
